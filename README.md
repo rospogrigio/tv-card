@@ -71,7 +71,7 @@ https://twitter.com/_developit/status/1090364879377260544
 Add this to your `HACS settings tab`:
 
 ```
-https://github.com/marrobHD/tv-card
+https://github.com/rospogrigio/tv-card
 ```
 ![example](https://i.imgur.com/2urg4m2.png)
 
@@ -82,8 +82,8 @@ Install `tv-card` by copying `tv-card.js` and `tv-card-editor.js` from this repo
 **Example:**
 
 ```bash
-wget https://raw.githubusercontent.com/marrobHD/tv-card/master/tv-card.js
-wget https://raw.githubusercontent.com/marrobHD/tv-card/master/tv-card-editor.js
+wget https://raw.githubusercontent.com/rospogrigio/tv-card/master/tv-card.js
+wget https://raw.githubusercontent.com/rospogrigio/tv-card/master/tv-card-editor.js
 mv tv-card* /config/www/
 ```
 
@@ -123,9 +123,9 @@ entities:
   - entity: input_boolean.tv
     name: TV
     tap_action:
-      action: call-service
-      service: browser_mod.popup
-      service_data:
+      action: fire-dom-event
+      browser_mod:
+        command: popup
         style:
           border-radius: 20px
           '--ha-card-border-radius': 0px
@@ -232,20 +232,15 @@ Add this to your `configuration.yaml`
 ```
 custom_updater:
   card_urls:
-    - https://raw.githubusercontent.com/marrobHD/tv-card/master/tracker.json
+    - https://raw.githubusercontent.com/rospogrigio/tv-card/master/tracker.json
 ```
 
 
 [Troubleshooting](https://github.com/thomasloven/hass-config/wiki/Lovelace-Plugins)
 
-[commits-shield]: https://img.shields.io/github/commit-activity/y/marrobHD/tv-card.svg?style=for-the-badge
-[commits]: https://github.com/marrobHD/tv-card/commits/master
-[discord]: https://discord.gg/ND4emRS
-[discord-shield]: https://img.shields.io/discord/579704220970909717.svg?style=for-the-badge
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg?style=for-the-badge
 [forum]: https://community.home-assistant.io/t/lovelace-tv-remote-card/91476
-[license-shield]: https://img.shields.io/github/license/marrobHD/tv-card.svg?style=for-the-badge
-[maintenance-shield]: https://img.shields.io/badge/maintainer-marrobHD-blue.svg?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/marrobHD/tv-card.svg?style=for-the-badge
-[releases]: https://github.com/marrobHD/tv-card/releases
-[github]: https://img.shields.io/github/followers/marrobHD.svg?style=social
+[license-shield]: https://img.shields.io/github/license/rospogrigio/tv-card.svg?style=for-the-badge
+[maintenance-shield]: https://img.shields.io/badge/maintainer-rospogrigio-blue.svg?style=for-the-badge
+[releases-shield]: https://img.shields.io/github/release/rospogrigio/tv-card.svg?style=for-the-badge
+[releases]: https://github.com/rospogrigio/tv-card/releases
